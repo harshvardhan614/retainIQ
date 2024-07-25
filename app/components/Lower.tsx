@@ -2,7 +2,9 @@ import React from 'react'
 
 const Lower = () => {
   return (
-    <div>Lower</div>
+    <div className='p-4'>
+        <h4>lower part</h4>        
+    </div>
   )
 }
 
