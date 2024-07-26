@@ -58,8 +58,8 @@ const Table = () => {
           {/* table header */}
           <thead>
             <tr>
-              <TableCell className="sticky-header left-0">{" "}</TableCell>
-              <TableCell className="text-TextGrey w-[300px] sticky-header left-[70px]">Product Filter</TableCell>
+              <TableCell className="sticky-header left-0 border-none">{" "}</TableCell>
+              <TableCell className="text-TextGrey w-[300px] sticky-header left-[80px]">Product Filter</TableCell>
               <TableCell className="w-[600px]">
                 <div className='flex items-center justify-between gap-3'>
                   <div className="flex space-x-4 overflow-x-auto hidden-scrollbar">
