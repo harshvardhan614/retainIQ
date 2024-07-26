@@ -102,7 +102,7 @@ const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow
   drag(drop(ref));
 
   return (
-    <tr key={state.id} className="h-[200px] cursor-pointer group" style={{ opacity }} ref={ref} data-handler-id={handlerId}>
+    <tr key={state.id} className="h-[200px] group" style={{ opacity }} ref={ref} data-handler-id={handlerId}>
       <TableCell className="sticky-header left-0 border-none">
         <button onClick={() => removeState(state.id)} className="cursor-pointer flex-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
           <Image src="/delete.svg" alt="Remove" width={20} height={20} className='w-[20px] h-[20px]' />
@@ -114,7 +114,7 @@ const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow
           </button>
         </div>
       </TableCell>
-      <TableCell className="sticky-header left-[80px]">
+      <TableCell className="sticky-header left-[75px]">
         <div className="flex-center gap-2 border-dashed border-TextGreyLight rounded-md cursor-pointer p-3 custom-shadow w-[300px] h-[160px] bg-white">
           <button className="filterButton flex-center gap-3">
             <Image src="/add.svg" alt="Add" width={20} height={20} className='w-[20px] h-[20px]' />
@@ -155,7 +155,7 @@ const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow
           ))}
         </div>
       </TableCell>
-      <TableCell className="sticky-header border-none right-0">
+      <TableCell className="border-none ">
         <AddButton onClick={addVariant} />
       </TableCell>
     </tr>

@@ -54,13 +54,13 @@ const Table = () => {
   return (
     <div className="container mx-auto my-4 bg-[#F9FBFC] p-4 border border-TextGreyLight">
       <div className="overflow-x-auto">
-        <table className="min-w-full">
+        <table className="max-w-full">
           {/* table header */}
           <thead>
             <tr>
-              <TableCell className="sticky-header left-0 border-none">{" "}</TableCell>
-              <TableCell className="text-TextGrey w-[300px] sticky-header left-[80px]">Product Filter</TableCell>
-              <TableCell className="w-[600px]">
+              <TableCell className="sticky-header left-0 border-none w-[80px]">{" "}</TableCell>
+              <TableCell className="text-TextGrey w-[300px] sticky-header left-[75px]">Product Filter</TableCell>
+              <TableCell className="max-w-[600px]">
                 <div className='flex items-center justify-between gap-3'>
                   <div className="flex space-x-4 overflow-x-auto hidden-scrollbar">
                     {variants.map((variant) => (
