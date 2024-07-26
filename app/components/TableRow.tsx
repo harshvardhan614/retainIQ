@@ -108,7 +108,7 @@ const TableRow = ({ state, variants, removeState,index,id, addVariant, moveRow }
         </div>
       </TableCell>
       {/* table filter section */}
-      <TableCell className="">
+      <TableCell className="sticky-header left-[70px]">
         <div className="flex-center gap-2 border-dashed border-TextGreyLight rounded-md cursor-pointer p-3 custom-shadow w-[300px] h-[160px] bg-white">
           <button className="filterButton flex-center gap-3">
             <Image src="/add.svg" alt="Add" width={20} height={20} className='w-[20px] h-[20px]' />

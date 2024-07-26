@@ -1,12 +1,11 @@
 "use client"
 import React, { useCallback, useState } from 'react';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import AddButton from './common/AddButton';
 import TableCell from './common/TableCell';
 import update from 'immutability-helper';
 import Image from 'next/image';
 import TableRow from './TableRow';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Table = () => {
     //for manage the row state
@@ -60,7 +59,7 @@ const Table = () => {
           <thead>
             <tr>
               <TableCell className="sticky-header left-0">{" "}</TableCell>
-              <TableCell className="text-TextGrey w-[300px]">Product Filter</TableCell>
+              <TableCell className="text-TextGrey w-[300px] sticky-header left-[70px]">Product Filter</TableCell>
               <TableCell className="w-[600px]">
                 <div className='flex items-center justify-between gap-3'>
                   <div className="flex space-x-4 overflow-x-auto hidden-scrollbar">
@@ -102,7 +101,7 @@ const Table = () => {
           </tfoot>
         </table>
       </div>
-      <ToastContainer />
+      <Toaster />
     </div>
   );
 };
