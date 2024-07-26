@@ -108,7 +108,7 @@ const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow
           <Image src="/delete.svg" alt="Remove" width={20} height={20} className='w-[20px] h-[20px]' />
         </button>
         <div className='flex-center gap-3'>
-          <h1 className="heading text-3xl md:text-4xl font-bold">{state.name}</h1>
+          <h1 className="heading text-3xl md:text-4xl font-bold">{index+1}</h1>
           <button className="cursor-pointer">
             <Image src='/Drag.png' alt="Drag" width={20} height={20} className='w-[20px] h-[20px]' />
           </button>
