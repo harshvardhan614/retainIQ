@@ -156,14 +156,17 @@ const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow
                                     style={{ display: 'none' }}
                                     onChange={(e) => handleImageUpload(e, variant.id)}
                                 />
-                                <label htmlFor={`file-upload-${variant.id}`} className="filterButton flex-center gap-3 cursor-pointer bg-white absolute"> {uploadedImages[variant.id as number] ?
-                                    <Image src="/upload.svg" alt="change" width={20} height={20} className='w-[20px] h-[20px]' />
-                                :
-                                    <><Image src="/add.svg" alt="Upload" width={20} height={20} className='w-[20px] h-[20px]' />
-                                    <p className="text-TextGrey">Add design</p>
-                                    </>
+                                {uploadedImages[variant.id as number] ?
+                                    <label htmlFor={`file-upload-${variant.id}`} className="filterButton flex-center gap-3 cursor-pointer bg-white absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                                        <Image src="/upload.svg" alt="change" width={20} height={20} className='w-[20px] h-[20px]' />
+                                    </label>
+                                    :
+                                    <label htmlFor={`file-upload-${variant.id}`} className="filterButton flex-center gap-3 cursor-pointer bg-white absolute">
+                                        <Image src="/add.svg" alt="Upload" width={20} height={20} className='w-[20px] h-[20px]' />
+                                        <p className="text-TextGrey">Add design</p>
+                                    </label>
                                 }
-                                </label>
+
                                 {uploadedImages[variant.id as number] && (
                                     <div className="flex flex-col items-center gap-2">
                                         <Image src={uploadedImages[variant.id as number].url} alt={uploadedImages[variant.id as number].name} width={100} height={100} className="w-[100px] h-[100px] object-cover" />
