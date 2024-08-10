@@ -12,41 +12,14 @@ interface DragItem {
   type: string;
 }
 
-interface UploadedImage {
-  url: string;
-  name: string;
-}
 
-interface UploadedImages {
-  [stateId: number]: {
-    [variantId: number]: UploadedImage;
-  };
-}
 
 export const ItemTypes = {
   CARD: 'card',
 };
 
-const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow }: any) => {
-  const [uploadedImages, setUploadedImages] = useState<UploadedImages>({});
-
-  const handleImageUpload = (event: any, stateId: number, variantId: number) => {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setUploadedImages((prev: any) => ({
-          ...prev,
-          [stateId]: {
-            ...prev[stateId],
-            [variantId]: { url: reader.result, name: file.name },
-          },
-        }));
-      };
-      reader.readAsDataURL(file);
-    }
-  };
-
+const TableRow = ({ state, variants, removeState, index, id, addVariant, moveRow, uploadedImages, handleImageUpload }: any) => {
+  
   const ref = useRef<HTMLTableRowElement>(null);
   const [{ handlerId }, drop] = useDrop<
     DragItem,
