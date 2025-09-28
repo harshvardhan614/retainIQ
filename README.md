@@ -1,7 +1,7 @@
 # Frontend Developer Assignment: UI Implementation
 
 ## Objective
-Assignment submission by Harshvardhan Rathore. Contact me at +91 7505146145/6396361577 or via email at rharshvardhan614@gmail.com.
+Assignment submission by Harshvardhan Rathore. Contact me at rharshvardhan614@gmail.com.
 Implements the Frontend resembling as demonstrated in the provided video reference. Each row represents a state, with the first column dedicated to product filters and the subsequent columns representing design variants.
 
 
